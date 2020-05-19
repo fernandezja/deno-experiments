@@ -1,7 +1,3 @@
-import { encode } from "https://deno.land/std/encoding/utf8.ts";
-import { BufReader } from "https://deno.land/std/io/bufio.ts";
-import { TextProtoReader } from "https://deno.land/std/textproto/mod.ts";
-import { blue, green, red, yellow } from "https://deno.land/std/fmt/colors.ts";
 import { WebSocket } from "https://deno.land/x/websocket/mod.ts";
 
 //https://stackoverflow.com/questions/37764665/typescript-sleep
@@ -18,6 +14,7 @@ ws.on("message", function (message: string) {
   console.log(message);
 });
 
+
 (async () => { 
     
     console.log('Delay 50ms')
@@ -29,3 +26,4 @@ ws.on("message", function (message: string) {
     await ws.send("ping to websocket...");
     
 })();
+
